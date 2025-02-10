@@ -5,24 +5,20 @@ export class User {
         this.#name = name;
     }
 
-    get getName() {
+    get name() {
         return this.#name;
     }
 
-    set setName(name) {
+    set name(name) {
         this.#name = name;
     }
 
-    get getAddress() {
+    get address() {
         return this.#address;
     }
 
-    set setAddress(address) {
+    set address(address) {
         this.#address = address;
-    }
-
-    set setAddressStreet(street) {
-        this.#address.street = street;
     }
 
     registerUser(name) {
@@ -33,13 +29,11 @@ export class User {
 
 const user = new User('Ada');
 user.setName = 'Charles';
-console.log(user.getName);
+console.log(user.name);
 
 user.registerUser('Robert');
-user.setAddress = {
+user.address = {
     city: "New York",
     street: 11
 };
-console.log(user.getAddress);
-user.setAddressStreet = 'new street';
-console.log(user.getAddress);
+console.log(user.address);
