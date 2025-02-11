@@ -28,7 +28,7 @@ export class User {
 }
 
 const user = new User('Ada');
-user.setName = 'Charles';
+user.name = 'Charles';
 console.log(user.name);
 
 user.registerUser('Robert');
