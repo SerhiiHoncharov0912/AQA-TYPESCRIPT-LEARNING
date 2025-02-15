@@ -1,4 +1,3 @@
-const arr1 = [1, 2, 3, 4, 5];
 const arr2 = ['c', 'e', 'a', 'd', 'b'];
 const arr3 = [true, false, true, false, true];
 const arr4 = [1, 'a', true, 2, 'b', false, 3, 'c', true, 4, 'd', false, 5, 'e', true];
