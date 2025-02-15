@@ -1,11 +1,14 @@
 async function getJson() {
-    const response = await fetch('https://catfact.ninja/docs/api-docs.json');
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const json = await response.json();
     processResponse(json);
 }
 
 function processResponse(json) {
-    console.log(json.info);
+    console.log(json[0]);
 }
 
-getJson();
+(async () => {
+    await getJson();
+})();
+

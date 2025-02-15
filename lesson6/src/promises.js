@@ -1,5 +1,5 @@
 function getJson() {
-    return fetch('https://catfact.ninja/docs/api-docs.json')
+    return fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => {
             return response.json();
         })
@@ -8,7 +8,9 @@ function getJson() {
 }
 
 function processResponse(json) {
-    console.log(json.info);
+    console.log(json[1]);
 }
 
-getJson();
+(async () => {
+    await getJson();
+})();
