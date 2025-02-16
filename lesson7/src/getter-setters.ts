@@ -1,21 +1,26 @@
 export class Address {
-    public declare city: string;
-    public declare street: number;
+    public city: string;
+    public street: number;
+
+    public constructor(city: string, street: number) {
+    this.city = city;
+    this.street = street;
+    }
 }
 
 export class User {
     #name: string;
     #address: Address;
-    public constructor(name: string) {
-        this.#name = name;
-        this.#address = new Address();
+    public constructor(name: string, city: string, street: number) { 
+        this.#name = name; 
+        this.#address = new Address(city, street); 
     }
 
     public get name(): string {
         return this.#name;
     }
 
-    public set name(name) {
+    public set name(name: string) {
         this.#name = name;
     }
 
@@ -23,7 +28,7 @@ export class User {
         return this.#address;
     }
 
-    public set address(address) {
+    public set address(address: Address) {
         this.#address = address;
     }
 
@@ -33,13 +38,11 @@ export class User {
     }
 }
 
-const user = new User('Ada');
+const user = new User('Ada', 'LA', 15);
 user.name = 'Charles';
 console.log(user.name);
+console.log(user.address);
 
 user.registerUser('Robert');
-user.address = {
-    city: "New York",
-    street: 11
-};
+user.address = new Address('New York', 11);
 console.log(user.address);

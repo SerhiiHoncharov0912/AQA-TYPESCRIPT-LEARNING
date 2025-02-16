@@ -1,4 +1,4 @@
-const arraySum = (arr: string[] | number[]): unknown => {
+const arraySum = (arr: string[] | number[]): string => {
     let sum = '';
     for (const item of arr) {
         sum += item;
