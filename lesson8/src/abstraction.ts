@@ -13,5 +13,4 @@ export class Button extends WebElement {
     }
 }
 
-const button = new Button();
-button.focusElement().clickElement();
+

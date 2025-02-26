@@ -3,17 +3,17 @@ export class Address {
     public street: number;
 
     public constructor(city: string, street: number) {
-    this.city = city;
-    this.street = street;
+        this.city = city;
+        this.street = street;
     }
 }
 
 export class User {
     #name: string;
     #address: Address;
-    public constructor(name: string, city: string, street: number) { 
-        this.#name = name; 
-        this.#address = new Address(city, street); 
+    public constructor(name: string, city: string, street: number) {
+        this.#name = name;
+        this.#address = new Address(city, street);
     }
 
     public get name(): string {
