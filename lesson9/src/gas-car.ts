@@ -1,8 +1,9 @@
-import { Car } from './car';
+import { LandTransport } from './land-transport';
+import { ICar } from './icar';
 
-export class GasCar extends Car {
+export class GasCar extends LandTransport implements ICar {
     public constructor() {
-        super('Gas');
+        super('Gas car');
     }
 
     public engineIsSpinning(): void {
