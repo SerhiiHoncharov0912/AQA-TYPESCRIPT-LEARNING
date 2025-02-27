@@ -1,7 +1,7 @@
 import { Speed } from "./engine";
 import { ITransport } from "./itransport";
 
-export abstract class Car implements ITransport {
+export class LandTransport implements ITransport {
     public speed = 0;
     private carType: string;
 
@@ -9,15 +9,12 @@ export abstract class Car implements ITransport {
         this.carType = carType;
     }
 
-    public move(destination: string): void {
-        this.engineIsSpinning();
+    public move(destination: string): string {
         this.speed = new Speed().getSpeed();
-        console.log(`${this.carType} car is moving to ${destination}`);
+        return `${this.carType} transport is moving to ${destination}`;
     }
 
     public getCurrentSpeed(): number {
         return this.speed;
     }
-
-    public abstract engineIsSpinning(): void;
 }

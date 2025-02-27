@@ -1,11 +1,12 @@
-import { Car } from './car';
+import { LandTransport } from './land-transport';
+import { ICar } from './icar';
 
-export class ElectricCar extends Car {
+export class ElectricCar extends LandTransport implements ICar {
     public constructor() {
-        super('Electric');
+        super('Electric car');
     }
 
-    public engineIsSpinning(): void {
-        console.log('Electric engine is spinning.');
+    public engineIsSpinning(): string {
+        return 'Electric engine is spinning.';
     }
 }
