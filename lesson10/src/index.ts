@@ -9,6 +9,7 @@ function useTransport(transport: ITransport, destination: string): void {
 
 const electricCar = new ElectricCar();
 useTransport(electricCar, 'New York');
+console.log(electricCar.engineIsSpinning());
 console.log(electricCar.getCurrentSpeed());
 
 const plane = new Plane();
@@ -17,5 +18,6 @@ console.log(plane.getCurrentSpeed());
 
 const gasCar = new GasCar();
 useTransport(gasCar, `Kyiv`);
+console.log(gasCar.engineIsSpinning());
 console.log(gasCar.getCurrentSpeed());
 
