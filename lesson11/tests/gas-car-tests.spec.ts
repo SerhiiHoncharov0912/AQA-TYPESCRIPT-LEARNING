@@ -11,8 +11,8 @@ describe('GasCar tests', () => {
 
     gasCarStubInstance.engineIsSpinning.returns(address);
 
-    describe('engineIsSpinning', () => {
-        it('should return the address', () => {
+    describe('GasCar engineIsSpinning test', () => {
+        it('GasCar engineIsSpinning should return the address', () => {
             expect(gasCarStubInstance.engineIsSpinning()).to.be.equal(address);
         });
     });
