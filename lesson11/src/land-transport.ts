@@ -1,5 +1,5 @@
-import { Speed } from "./engine";
-import { ITransport } from "./itransport";
+import { Speed } from './engine';
+import { ITransport } from './itransport';
 
 export class LandTransport implements ITransport {
     public speed = 0;
@@ -9,9 +9,9 @@ export class LandTransport implements ITransport {
         this.carType = carType;
     }
 
-    public move(destination: string): void {
+    public move(destination: string): string {
         this.speed = new Speed().getSpeed();
-        console.log(`${this.carType} transport is moving to ${destination}`);
+        return `${this.carType} transport is moving to ${destination}`;
     }
 
     public getCurrentSpeed(): number {
